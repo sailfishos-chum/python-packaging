@@ -8,7 +8,8 @@
 %define clamp_mtime_to_source_date_epoch 1
 %define use_source_date_epoch_as_buildtime 1
 
-Name:           python%{python_pkgversion}-%{dist_name}
+# note: macros in name break OBS build
+Name:           python3-packaging
 Summary:        Core utilities for Python packages
 Version:        21.3
 Release:        1%{?dist}
