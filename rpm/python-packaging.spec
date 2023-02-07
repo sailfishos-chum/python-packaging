@@ -20,8 +20,9 @@ BuildArch:      noarch
 BuildRequires:  python%{python_pkgversion}-devel
 BuildRequires:  python%{python_pkgversion}-setuptools
 
+# disable docs by default due to missing dependencies (alabaster on SFOS 4.5)
+%bcond_with docs
 # disable tests by default due to missing dependencies
-%bcond_without docs
 %bcond_with tests
 %if %{with tests}
 BuildRequires:  python%{python_pkgversion}-pytest
